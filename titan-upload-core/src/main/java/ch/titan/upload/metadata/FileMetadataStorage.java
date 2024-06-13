@@ -1,6 +1,6 @@
-package cn.ljh.upload.metadata;
+package ch.titan.upload.metadata;
 
-import cn.ljh.upload.entity.FileMetadata;
+import ch.titan.upload.entity.FileMetadata;
 
 /**
  * 文件元数据存储

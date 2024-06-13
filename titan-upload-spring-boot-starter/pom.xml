@@ -1,55 +1,136 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.ljh</groupId>
-		<artifactId>titan-upload</artifactId>
-		<version>1.0.0</version>
-	</parent>
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>titan-upload-spring-boot-starter</artifactId>
+<parent>
+	<groupId>ch.titan.upload</groupId>
+	<artifactId>titan-upload-component</artifactId>
+	<version>1.0.1</version>
+</parent>
 
-	<properties>
-		<java.version>17</java.version>
-		<spring-boot.version>3.3.0</spring-boot.version>
-	</properties>
+<packaging>jar</packaging>
+<artifactId>titan-upload-spring-boot-starter</artifactId>
+<version>1.0.1</version>
+<name>titan-upload-spring-boot-starter</name>
+<description>大文件上传</description>
+<url>https://github.com/1044586526/titan-upload</url>
+
+<licenses>
+	<license>
+		<name>The Apache Software License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	</license>
+</licenses>
+
+<developers>
+	<developer>
+		<id>pfr</id>
+		<name>pfr</name>
+		<email>1044586526@qq.com</email>
+		<roles>
+			<role>Project Manager</role>
+			<role>Architect</role>
+		</roles>
+	</developer>
+</developers>
+
+<properties>
+	<java.version>8</java.version>
+	<spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+</properties>
+
+<dependencies>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter</artifactId>
+		<version>${spring-boot.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-configuration-processor</artifactId>
+		<version>${spring-boot.version}</version>
+		<optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>ch.titan.upload</groupId>
+		<artifactId>titan-upload-core</artifactId>
+		<version>1.0.1</version>
+		<scope>compile</scope>
+	</dependency>
+</dependencies>
 
 
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.ljh</groupId>
-			<artifactId>titan-upload-core</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+<scm>
+	<connection>https://github.com/1044586526/titan-upload.git</connection>
+	<developerConnection>scm:git:https://github.com/1044586526/titan-upload.git</developerConnection>
+	<url>https://github.com/1044586526/titan-upload</url>
+</scm>
 
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>7</source>
-					<target>7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+<build>
+	<plugins>
+		<!--   central发布插件    -->
+		<plugin>
+			<groupId>org.sonatype.central</groupId>
+			<artifactId>central-publishing-maven-plugin</artifactId>
+			<version>0.4.0</version>
+			<extensions>true</extensions>
+			<configuration>
+				<publishingServerId>titan-upload</publishingServerId>
+				<tokenAuth>true</tokenAuth>
+			</configuration>
+		</plugin>
+		<!--   source源码插件 -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>2.2.1</version>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar-no-fork</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<!--   javadoc插件 -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.9.1</version>
+			<executions>
+				<execution>
+					<id>attach-javadocs</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-gpg-plugin</artifactId>
+			<version>1.5</version>
+			<configuration>
+				<executable>D:\company\workspae\company\ly-tools\GnuPG\bin\gpg.exe</executable>
+				<keyname>io.github.titan-upload</keyname>
+			</configuration>
+			<executions>
+				<execution>
+					<id>sign-artifacts</id>
+					<phase>verify</phase>
+					<goals>
+						<goal>sign</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+
+	</plugins>
+</build>
 
 </project>
+
+
+

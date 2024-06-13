@@ -1,4 +1,4 @@
-package cn.ljh.upload.enums;
+package ch.titan.upload.enums;
 
 /**
  * 定义异常接口

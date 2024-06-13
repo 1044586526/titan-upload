@@ -1,4 +1,4 @@
-package cn.ljh.upload.metadata;
+package ch.titan.upload.metadata;
 
 /**
  * 文件元数据存储

@@ -1,4 +1,4 @@
-package cn.ljh.upload.entity;
+package ch.titan.upload.entity;
 
 import java.time.LocalDateTime;
 

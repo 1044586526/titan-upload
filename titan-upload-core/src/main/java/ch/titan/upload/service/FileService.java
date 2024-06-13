@@ -1,7 +1,7 @@
-package cn.ljh.upload.service;
+package ch.titan.upload.service;
 
-import cn.ljh.upload.entity.FileUploadPreprocessResponse;
-import cn.ljh.upload.entity.ReturnVO;
+import ch.titan.upload.entity.FileUploadPreprocessResponse;
+import ch.titan.upload.entity.ReturnVO;
 
 import java.io.InputStream;
 

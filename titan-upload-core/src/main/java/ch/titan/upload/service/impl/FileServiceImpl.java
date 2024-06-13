@@ -1,13 +1,13 @@
-package cn.ljh.upload.service.impl;
+package ch.titan.upload.service.impl;
 
-import cn.ljh.upload.metadata.FileMetadataProperties;
-import cn.ljh.upload.entity.FileMetadata;
-import cn.ljh.upload.entity.FileUploadPreprocessResponse;
-import cn.ljh.upload.entity.ReturnVO;
-import cn.ljh.upload.enums.UploadErrorCodeEnum;
-import cn.ljh.upload.metadata.FileMetadataStorage;
-import cn.ljh.upload.service.FileService;
-import cn.ljh.upload.util.UploadFileUtil;
+import ch.titan.upload.entity.FileMetadata;
+import ch.titan.upload.entity.FileUploadPreprocessResponse;
+import ch.titan.upload.entity.ReturnVO;
+import ch.titan.upload.enums.UploadErrorCodeEnum;
+import ch.titan.upload.service.FileService;
+import ch.titan.upload.util.UploadFileUtil;
+import ch.titan.upload.metadata.FileMetadataProperties;
+import ch.titan.upload.metadata.FileMetadataStorage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
-package cn.ljh.upload.starter;
+package ch.titan.upload;
 
-import cn.ljh.upload.metadata.FileMetadataProperties;
+import ch.titan.upload.metadata.FileMetadataProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 

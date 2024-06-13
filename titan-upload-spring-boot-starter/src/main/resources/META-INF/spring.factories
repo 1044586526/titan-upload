@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-cn.ljh.upload.starter.FileMetadataStorageFactory
+ch.titan.upload.FileMetadataStorageFactory
 
 

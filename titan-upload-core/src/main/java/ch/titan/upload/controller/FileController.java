@@ -1,11 +1,12 @@
-package cn.ljh.upload.controller;
+package ch.titan.upload.controller;
 
-import cn.ljh.upload.entity.FileUploadPreprocessResponse;
-import cn.ljh.upload.entity.ReturnVO;
-import cn.ljh.upload.service.FileService;
-import jakarta.validation.constraints.NotBlank;
+import ch.titan.upload.entity.FileUploadPreprocessResponse;
+import ch.titan.upload.entity.ReturnVO;
+import ch.titan.upload.service.FileService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.constraints.NotBlank;
 import java.io.IOException;
 
 /**

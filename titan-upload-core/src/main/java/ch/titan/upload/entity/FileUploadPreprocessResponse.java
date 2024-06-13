@@ -1,4 +1,4 @@
-package cn.ljh.upload.entity;
+package ch.titan.upload.entity;
 
 /**
  * 文件上传预处理响应

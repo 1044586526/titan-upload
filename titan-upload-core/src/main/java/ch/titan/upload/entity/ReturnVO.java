@@ -1,8 +1,8 @@
-package cn.ljh.upload.entity;
+package ch.titan.upload.entity;
 
 
-import cn.ljh.upload.enums.ErrorType;
-import cn.ljh.upload.enums.UploadErrorCodeEnum;
+import ch.titan.upload.enums.ErrorType;
+import ch.titan.upload.enums.UploadErrorCodeEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 

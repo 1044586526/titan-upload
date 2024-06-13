@@ -1,12 +1,12 @@
-package cn.ljh.upload.starter;
+package ch.titan.upload;
 
-import cn.ljh.upload.controller.FileController;
-import cn.ljh.upload.metadata.DatabaseFileMetadataStorage;
-import cn.ljh.upload.metadata.FileMetadataProperties;
-import cn.ljh.upload.metadata.FileMetadataStorage;
-import cn.ljh.upload.metadata.LocalFileMetadataStorage;
-import cn.ljh.upload.service.FileService;
-import cn.ljh.upload.service.impl.FileServiceImpl;
+import ch.titan.upload.service.FileService;
+import ch.titan.upload.controller.FileController;
+import ch.titan.upload.metadata.DatabaseFileMetadataStorage;
+import ch.titan.upload.metadata.FileMetadataProperties;
+import ch.titan.upload.metadata.FileMetadataStorage;
+import ch.titan.upload.metadata.LocalFileMetadataStorage;
+import ch.titan.upload.service.impl.FileServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
